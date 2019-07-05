@@ -1,0 +1,6 @@
+---
+# tasks file for ansible-ripgrep
+- name: Install package
+  apt:
+    deb: https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
+    state: present

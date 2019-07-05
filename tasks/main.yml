@@ -1,0 +1,13 @@
+---
+# tasks file for ansible-ripgrep
+
+- include: "{{ lookup('first_found', install_file) }}"
+  vars:
+    install_file:
+      - "install_{{ ansible_distribution }}.yml"
+      - "install_default.yml"
+
+# - name: Install package
+# apt:
+#   deb: https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
+#   state: present

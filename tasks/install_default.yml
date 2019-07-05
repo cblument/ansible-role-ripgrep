@@ -1,0 +1,4 @@
+---
+- name: fail if  could not determine os
+  fail:
+    msg: "Could not find installation file for {{ ansible_distribution }}"

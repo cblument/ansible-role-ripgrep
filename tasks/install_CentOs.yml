@@ -1,0 +1,12 @@
+---
+
+- name: Install repository
+  yum_repository:
+    name: carlwgeorge-ripgrep
+    description: "Copr repo for ripgrep owned by carlwgeorge"
+    baseurl: "https://copr-be.cloud.fedoraproject.org/results/carlwgeorge/ripgrep/epel-7-$basearch/"
+    gpgkey: "https://copr-be.cloud.fedoraproject.org/results/carlwgeorge/ripgrep/pubkey.gpg"
+
+- name: Install package
+  yum:
+    name: ripgrep
